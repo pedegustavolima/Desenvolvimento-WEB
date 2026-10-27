@@ -1,0 +1,746 @@
+
+/* =========================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================= */
+
+/*
+    O seletor universal (*) seleciona todos os elementos
+    da página.
+
+    margin: 0 remove as margens externas padrão.
+    padding: 0 remove os espaçamentos internos padrão.
+    box-sizing: border-box faz com que o padding e a borda
+    sejam incluídos no cálculo da largura e da altura.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+    O seletor body configura a aparência geral da página.
+
+    font-family define as fontes utilizadas.
+    color define a cor padrão dos textos.
+    background-color define a cor de fundo.
+    line-height controla a altura das linhas de texto,
+    melhorando a leitura.
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #34251f;
+    background-color: #f8f4ed;
+    line-height: 1.6;
+}
+
+/*
+    A classe container envolve todo o conteúdo do site.
+
+    width: 92% ocupa 92% da largura disponível.
+    max-width limita a largura máxima a 1150 pixels.
+    margin: 30px auto cria margem superior e inferior
+    de 30 pixels e centraliza o container horizontalmente.
+    background-color define o fundo da área.
+    border-radius arredonda os cantos.
+    overflow: hidden impede que o conteúdo ultrapasse
+    os limites arredondados.
+    box-shadow cria uma sombra ao redor do container.
+*/
+
+.container {
+    width: 92%;
+    max-width: 1150px;
+    margin: 30px auto;
+    background-color: #fffdf9;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(70, 39, 20, 0.10);
+}
+
+
+/* =========================================
+   2. CABEÇALHO
+   ========================================= */
+
+/*
+    A tag header representa o cabeçalho do site.
+
+    display: flex organiza os elementos internos
+    lado a lado.
+    align-items: center centraliza os elementos
+    verticalmente.
+    min-height define a altura mínima.
+    background-color define a cor de fundo.
+    border-bottom cria uma borda inferior que separa
+    o cabeçalho do conteúdo principal.
+*/
+
+header {
+    display: flex;
+    align-items: center;
+    min-height: 190px;
+    background-color: #fffdf9;
+    border-bottom: 5px solid #e9ddcb;
+}
+
+
+/* ÁREA DA LOGO */
+
+/*
+    A classe logo envolve a imagem da marca.
+
+    width define que a área ocupa 25% da largura
+    disponível no cabeçalho.
+    min-height define sua altura mínima.
+    padding cria espaço interno.
+    display: flex permite organizar e centralizar
+    o conteúdo da área.
+    justify-content: center centraliza horizontalmente.
+    align-items: center centraliza verticalmente.
+    background-color define o fundo da logo.
+    border-right cria uma separação visual à direita.
+*/
+
+.logo {
+    width: 25%;
+    min-height: 190px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff2d9;
+    border-right: 1px solid #ead9bc;
+}
+
+/*
+    Configura a imagem da logo.
+
+    width: 100% permite que ela ocupe a largura
+    disponível em seu elemento.
+    max-width limita sua largura a 150 pixels.
+    height define uma altura de 150 pixels.
+    object-fit: contain mantém a imagem inteira
+    visível, sem cortar suas partes.
+*/
+
+.logo img {
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+
+/* NOME DA LANCHONETE */
+
+/*
+    A classe titulo envolve o nome da empresa,
+    o subtítulo e a frase de apresentação.
+
+    flex: 1 faz essa área ocupar o espaço restante
+    do cabeçalho.
+    padding cria espaçamento interno.
+    text-align: center centraliza os textos.
+*/
+
+.titulo {
+    flex: 1;
+    padding: 25px 40px;
+    text-align: center;
+}
+
+/*
+    A classe subtitulo destaca textos auxiliares,
+    como "LANCHONETE ARTESANAL" e "NOSSO CARDÁPIO".
+
+    display: inline-block permite aplicar propriedades
+    de bloco mantendo o elemento na linha.
+    color define a cor do texto.
+    font-size define o tamanho da fonte.
+    font-weight: bold deixa o texto em negrito.
+    letter-spacing controla o espaço entre as letras.
+*/
+
+.subtitulo {
+    display: inline-block;
+    color: #b47b25;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/*
+    Configura o título principal da lanchonete.
+
+    color define a cor vermelha.
+    font-family utiliza uma fonte serifada.
+    font-size define o tamanho do texto.
+    line-height controla a altura da linha.
+    margin cria espaçamento acima e abaixo do título.
+*/
+
+.titulo h1 {
+    color: #a52b20;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    line-height: 1.3;
+    margin: 5px 0;
+}
+
+/*
+    Configura o parágrafo de apresentação
+    localizado abaixo do nome da lanchonete.
+*/
+
+.titulo p {
+    color: #725345;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   3. ÁREA PRINCIPAL
+   ========================================= */
+
+/*
+    A tag main contém a barra lateral (aside)
+    e a seção de produtos.
+
+    display: flex posiciona essas duas áreas
+    lado a lado.
+    align-items: stretch faz com que elas ocupem
+    a altura disponível da área principal.
+    min-height define a altura mínima de 440 pixels.
+*/
+
+main {
+    display: flex;
+    align-items: stretch;
+    min-height: 440px;
+}
+
+
+/* =========================================
+   4. BARRA LATERAL
+   ========================================= */
+
+/*
+    A tag aside representa a barra lateral.
+
+    width define que ela ocupa 25% da largura.
+    flex-shrink: 0 impede que ela encolha
+    automaticamente quando falta espaço.
+    padding cria espaçamento interno.
+    background-color define o fundo bege.
+    flex-direction: column organiza os elementos
+    verticalmente.
+    justify-content e align-items centralizam
+    os elementos dentro da barra.
+    text-align centraliza os textos.
+    border-right separa a barra lateral dos produtos.
+*/
+
+aside {
+    width: 25%;
+    flex-shrink: 0;
+    padding: 25px 18px;
+    background-color: #f8e9cf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 5px solid #e9ddcb;
+}
+
+/*
+    A classe personagem envolve a imagem ilustrativa.
+
+    width: 100% permite ocupar o espaço disponível.
+    max-width limita a largura a 220 pixels.
+    margin-bottom cria espaço abaixo da imagem.
+*/
+
+.personagem {
+    width: 100%;
+    max-width: 220px;
+    margin-bottom: 15px;
+}
+
+/*
+    Configura a imagem do personagem.
+
+    display: block remove o espaço extra que pode
+    aparecer abaixo de imagens em linha.
+    width: 100% adapta a imagem ao elemento.
+    max-height limita sua altura.
+    object-fit: contain mostra a imagem inteira,
+    evitando cortes.
+*/
+
+.personagem img {
+    display: block;
+    width: 100%;
+    max-height: 230px;
+    object-fit: contain;
+}
+
+/*
+    A classe mensagem agrupa os textos de apresentação.
+    max-width limita a largura do conteúdo para
+    melhorar a leitura.
+*/
+
+.mensagem {
+    max-width: 240px;
+}
+
+/*
+    A classe etiqueta destaca o texto "BEM-VINDO!".
+
+    padding cria espaço interno.
+    margin-bottom cria distância do próximo elemento.
+    border-radius arredonda os cantos.
+    background-color define o fundo vermelho.
+    color define o texto branco.
+    font-size controla o tamanho da fonte.
+    letter-spacing aumenta o espaçamento entre letras.
+*/
+
+.etiqueta {
+    display: inline-block;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: #a52b20;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/*
+    Configura o título da mensagem lateral.
+
+    A fonte serifada cria uma identidade visual
+    diferente dos demais textos.
+    line-height controla o espaçamento vertical.
+    margin-bottom separa o título do parágrafo.
+*/
+
+.mensagem h2 {
+    color: #8d251d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+/*
+    Configura o parágrafo da barra lateral,
+    usando uma cor mais suave e fonte menor.
+*/
+
+.mensagem p {
+    color: #725345;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   5. SEÇÃO DOS PRODUTOS
+   ========================================= */
+
+/*
+    A classe produtos envolve o cabeçalho do cardápio
+    e os dois artigos dos hambúrgueres.
+
+    flex: 1 ocupa o espaço restante do main.
+    min-width: 0 permite que o elemento encolha
+    quando necessário, evitando problemas de largura.
+    padding cria espaço interno.
+    flex-direction: column organiza os produtos
+    verticalmente.
+    gap define a distância entre os elementos.
+*/
+
+.produtos {
+    flex: 1;
+    min-width: 0;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/*
+    A classe cabecalho-produtos agrupa os títulos
+    da seção do cardápio.
+
+    display: flex permite distribuir os elementos
+    horizontalmente.
+    align-items: center alinha-os verticalmente.
+    justify-content: space-between distribui o espaço
+    entre os elementos.
+    padding-bottom cria espaço inferior.
+    border-bottom adiciona uma linha separadora.
+*/
+
+.cabecalho-produtos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee3d3;
+}
+
+/*
+    Estiliza o título "Conheça nossos lanches".
+*/
+
+.cabecalho-produtos h2 {
+    color: #8d251d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+/*
+    A classe icone-cardapio pode ser utilizada
+    para aumentar o tamanho de um ícone decorativo,
+    caso ele seja adicionado ao HTML.
+*/
+
+.icone-cardapio {
+    font-size: 35px;
+}
+
+
+/* =========================================
+   6. CADA LANCHE
+   ========================================= */
+
+/*
+    A classe produto estiliza cada artigo do cardápio.
+
+    display: flex posiciona a foto e a descrição
+    lado a lado.
+    align-items: stretch faz os elementos ocuparem
+    a altura disponível do artigo.
+    gap define a distância entre foto e descrição.
+    min-height define a altura mínima.
+    padding cria espaço interno.
+    background-color define o fundo branco.
+    border cria uma borda fina.
+    border-radius arredonda os cantos.
+    box-shadow adiciona uma sombra discreta.
+    transition suaviza as mudanças visuais
+    durante os efeitos de interação.
+*/
+
+.produto {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    min-height: 175px;
+    padding: 12px;
+    background-color: #ffffff;
+    border: 1px solid #eee1d0;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(70, 39, 20, 0.05);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/*
+    O seletor :hover aplica estilos quando o ponteiro
+    do mouse está sobre o produto.
+
+    transform: translateY(-3px) desloca o artigo
+    três pixels para cima.
+    box-shadow aumenta a intensidade da sombra.
+*/
+
+.produto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(70, 39, 20, 0.10);
+}
+
+
+/* FOTOGRAFIA DO LANCHE */
+
+/*
+    A classe foto define a área que contém a imagem.
+
+    width e min-width definem uma largura fixa
+    de 165 pixels.
+    min-height define a altura mínima.
+    overflow: hidden esconde partes da imagem
+    que ultrapassarem os limites da área.
+    border-radius arredonda os cantos da fotografia.
+    background-color define uma cor de fundo
+    para a área da imagem.
+*/
+
+.foto {
+    width: 165px;
+    min-width: 165px;
+    min-height: 150px;
+    overflow: hidden;
+    border-radius: 9px;
+    background-color: #f1e5d5;
+}
+
+/*
+    A imagem ocupa toda a largura disponível.
+
+    height: 100% permite preencher a altura
+    disponível do elemento.
+    min-height garante uma altura mínima.
+    object-fit: cover preenche a área da fotografia,
+    cortando o excedente quando necessário para
+    preservar as proporções da imagem.
+    transition suaviza o efeito de ampliação.
+*/
+
+.foto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/*
+    Quando o mouse passa sobre o produto,
+    a imagem aumenta ligeiramente de tamanho.
+    O efeito cria uma sensação de aproximação.
+*/
+
+.produto:hover .foto img {
+    transform: scale(1.04);
+}
+
+
+/* DESCRIÇÃO DO LANCHE */
+
+/*
+    A classe descricao contém a categoria,
+    o nome, o texto descritivo e os detalhes do produto.
+
+    flex: 1 ocupa o espaço restante ao lado da foto.
+    min-width: 0 permite que a descrição encolha.
+    padding cria espaço interno.
+    display: flex organiza os elementos em coluna.
+    justify-content: center centraliza o conteúdo
+    verticalmente.
+*/
+
+.descricao {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*
+    A classe categoria identifica o tipo do hambúrguer,
+    como "O CLÁSSICO" e "ESPECIAL DA CASA".
+
+    font-weight deixa o texto em negrito.
+    letter-spacing aumenta o espaço entre letras.
+    margin-bottom separa a categoria do título.
+*/
+
+.categoria {
+    color: #b47b25;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+/*
+    Estiliza o nome de cada hambúrguer.
+
+    A cor vermelha destaca o título.
+    A fonte serifada reforça a identidade visual.
+    line-height controla a altura das linhas.
+    margin-bottom separa o título da descrição.
+*/
+
+.descricao h3 {
+    color: #8d251d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+/*
+    Configura o texto descritivo dos ingredientes.
+    A fonte menor e a cor mais suave criam
+    uma hierarquia visual em relação ao título.
+*/
+
+.descricao p {
+    color: #6f625a;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/*
+    A classe detalhes agrupa a informação complementar
+    e o preço do hambúrguer.
+
+    display: flex posiciona os dois elementos
+    horizontalmente.
+    align-items: center alinha-os verticalmente.
+    justify-content: space-between distribui
+    um elemento à esquerda e outro à direita.
+    flex-wrap: wrap permite que eles passem
+    para outra linha se faltar espaço.
+    gap define o espaço entre eles.
+    margin-top separa os detalhes da descrição.
+*/
+
+.detalhes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+/*
+    Estiliza a informação complementar,
+    como "Preparado na hora".
+*/
+
+.detalhes span {
+    color: #8a786b;
+    font-size: 11px;
+}
+
+/*
+    Destaca o preço com uma cor verde
+    e tamanho maior.
+*/
+
+.detalhes strong {
+    color: #28733d;
+    font-size: 19px;
+}
+
+
+/* =========================================
+   7. RODAPÉ
+   ========================================= */
+
+/*
+    A tag footer representa o rodapé do site.
+
+    padding cria espaço interno.
+    background-color define o fundo marrom escuro.
+    color define a cor padrão dos textos.
+    text-align: center centraliza o conteúdo.
+    border-top cria uma linha superior dourada
+    para separar o rodapé da área principal.
+*/
+
+footer {
+    padding: 25px 20px 15px;
+    background-color: #38231e;
+    color: #f8eee1;
+    text-align: center;
+    border-top: 5px solid #c58a32;
+}
+
+/*
+    A classe footer-marca agrupa o nome da lanchonete
+    no rodapé.
+
+    display: flex organiza os elementos em linha.
+    justify-content e align-items centralizam
+    os elementos.
+    gap define o espaço entre eles.
+    margin-bottom separa a marca do próximo texto.
+    font-family define uma fonte serifada.
+*/
+
+.footer-marca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 5px;
+    color: #ffd17a;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+}
+
+/*
+    Define o tamanho de um eventual ícone
+    dentro da classe footer-marca.
+*/
+
+.footer-marca span {
+    font-size: 25px;
+}
+
+/*
+    O seletor footer > p seleciona apenas os parágrafos
+    que são filhos diretos do footer.
+
+    Define a cor e o tamanho da frase institucional.
+*/
+
+footer > p {
+    color: #e5d2c0;
+    font-size: 12px;
+}
+
+/*
+    A classe footer-creditos agrupa as informações
+    do desenvolvedor e do cliente.
+
+    display: flex organiza os créditos em linha.
+    justify-content: center centraliza o conjunto.
+    flex-wrap permite que os elementos quebrem
+    de linha quando não houver espaço suficiente.
+    gap define a distância entre os créditos.
+    margin cria espaço vertical.
+*/
+
+.footer-creditos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 18px 0;
+    font-size: 12px;
+}
+
+/*
+    A classe copyright estiliza a informação
+    de direitos autorais no final da página.
+
+    padding-top cria espaço acima do texto.
+    border-top adiciona uma linha separadora.
+    color define uma cor mais suave.
+    font-size reduz o tamanho da fonte.
+*/
+
+.copyright {
+    padding-top: 12px;
+    border-top: 1px solid #62473b;
+    color: #cdb9a8;
+    font-size: 11px;
+}
