@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<!--
+    Informa ao navegador que o documento utiliza HTML5,
+    a versão atual da linguagem HTML.
+-->
+
+<html lang="pt-br">
+<!--
+    A tag html envolve todo o conteúdo da página.
+    O atributo lang="pt-br" informa que o idioma
+    principal do site é o português do Brasil.
+-->
+
+<head>
+    <!--
+        A tag head contém configurações e informações
+        sobre a página que não aparecem diretamente
+        como conteúdo principal do site.
+    -->
+
+    <meta charset="UTF-8">
+    <!--
+        Define a codificação de caracteres UTF-8,
+        permitindo exibir corretamente acentos,
+        cedilhas e outros caracteres especiais.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        Permite que o site se adapte à largura da tela
+        de celulares, tablets e computadores.
+    -->
+
+    <title>Sabor Brasil | Lanchonete</title>
+    <!--
+        Define o título que aparece na aba do navegador.
+    -->
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <!--
+        Conecta o HTML ao arquivo CSS responsável
+        pelas cores, fontes, tamanhos, espaçamentos
+        e posicionamento dos elementos.
+        O arquivo está dentro da pasta CSS.
+    -->
+
+</head>
+
+<body>
+<!--
+    A tag body contém todo o conteúdo visível
+    da página que será exibido ao visitante.
+-->
+
+    <!-- CONTAINER GERAL DO SITE -->
+    <div class="container">
+    <!--
+        A div é um elemento utilizado para agrupar
+        outros elementos da página.
+
+        A classe container permite aplicar estilos
+        ao site inteiro, como largura, margens,
+        fundo e outros ajustes no CSS.
+    -->
+
+
+        <!-- CABEÇALHO: LOGO E NOME DA LANCHONETE -->
+        <header>
+        <!--
+            A tag header representa o cabeçalho da página
+            ou de uma seção.
+
+            Neste site, ela agrupa a logo e a identificação
+            da lanchonete Sabor Brasil.
+        -->
+
+            <!-- LOGO DA LANCHONETE -->
+            <div class="logo">
+            <!--
+                Agrupa a imagem da logo.
+                A classe logo permite controlar sua posição
+                e seu tamanho pelo CSS.
+            -->
+
+                <img src="img/logo.jpg" alt="Logo Sabor Brasil">
+                <!--
+                    A tag img exibe uma imagem.
+
+                    src indica o caminho do arquivo.
+                    Neste caso, a imagem está na pasta img
+                    e possui o nome logo.jpg.
+
+                    alt fornece uma descrição alternativa
+                    para leitores de tela e quando a imagem
+                    não pode ser carregada.
+                -->
+
+            </div>
+
+
+            <!-- IDENTIFICAÇÃO DA EMPRESA -->
+            <div class="titulo">
+            <!--
+                Agrupa o subtítulo, o nome da lanchonete
+                e a frase de apresentação.
+            -->
+
+                <span class="subtitulo">LANCHONETE ARTESANAL</span>
+                <!--
+                    A tag span agrupa um trecho de texto
+                    dentro de uma linha.
+
+                    A classe subtitulo permite personalizar
+                    sua aparência no CSS.
+                -->
+
+                <h1>Sabor Brasil</h1>
+                <!--
+                    h1 representa o título principal
+                    da página.
+
+                    É o título de maior importância
+                    na hierarquia do conteúdo.
+                -->
+
+                <p>Grandes sabores, momentos especiais.</p>
+                <!--
+                    A tag p representa um parágrafo.
+                    Aqui, apresenta a frase de divulgação
+                    da lanchonete.
+                -->
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main>
+        <!--
+            A tag main identifica o conteúdo principal
+            da página.
+
+            Neste site, ela reúne a barra lateral
+            e a seção que apresenta os hambúrgueres.
+        -->
+
+
+            <!-- BARRA LATERAL -->
+            <aside>
+            <!--
+                A tag aside representa um conteúdo
+                complementar ao conteúdo principal.
+
+                Aqui, funciona como uma barra lateral
+                com um personagem e uma mensagem
+                de apresentação da lanchonete.
+            -->
+
+                <div class="personagem">
+                <!--
+                    Agrupa a imagem do personagem.
+                    A classe personagem permite controlar
+                    seu tamanho e posicionamento no CSS.
+                -->
+
+                    <img
+                        src="img/chef.png"
+                        alt="Personagem segurando um prato com hambúrguer"
+                    >
+                    <!--
+                        Exibe a imagem do personagem.
+
+                        O atributo src indica que o arquivo
+                        chef.png está dentro da pasta img.
+
+                        O atributo alt descreve a imagem
+                        para fins de acessibilidade.
+                    -->
+
+                </div>
+
+
+                <div class="mensagem">
+                <!--
+                    Agrupa os textos de apresentação
+                    que aparecem abaixo do personagem.
+                -->
+
+                    <span class="etiqueta">BEM-VINDO!</span>
+                    <!--
+                        Pequeno destaque textual.
+                        A classe etiqueta permite criar
+                        uma aparência de selo ou etiqueta.
+                    -->
+
+                    <h2>Feito para matar sua fome!</h2>
+                    <!--
+                        h2 representa um título secundário,
+                        subordinado ao título principal h1.
+                    -->
+
+                    <p>
+                        Ingredientes selecionados, preparo cuidadoso
+                        e muito sabor em cada mordida.
+                    </p>
+                    <!--
+                        Parágrafo com uma breve apresentação
+                        dos diferenciais da lanchonete.
+                    -->
+
+                </div>
+
+            </aside>
+
+
+            <!-- SEÇÃO DOS LANCHES -->
+            <section class="produtos">
+            <!--
+                A tag section agrupa conteúdos relacionados.
+
+                Neste caso, reúne os produtos do cardápio.
+                A classe produtos permite organizar os dois
+                hambúrgueres em uma área específica.
+            -->
+
+
+                <!-- CABEÇALHO DA SEÇÃO DE PRODUTOS -->
+                <div class="cabecalho-produtos">
+                <!--
+                    Agrupa o subtítulo e o título
+                    da seção de cardápio.
+                -->
+
+                    <div>
+                        <span class="subtitulo">NOSSO CARDÁPIO</span>
+                        <!-- Identifica a seção do site. -->
+
+                        <h2>Conheça nossos lanches</h2>
+                        <!-- Título da seção de produtos. -->
+                    </div>
+
+                </div>
+
+
+                <!-- PRIMEIRO LANCHE -->
+                <article class="produto">
+                <!--
+                    A tag article representa um conteúdo
+                    independente, que pode ser compreendido
+                    separadamente do restante da página.
+
+                    Aqui, cada article representa um lanche
+                    do cardápio.
+
+                    A classe produto permite aplicar
+                    os mesmos estilos aos dois lanches.
+                -->
+
+
+                    <!-- FOTOGRAFIA DO PRIMEIRO LANCHE -->
+                    <div class="foto">
+                    <!--
+                        Agrupa a imagem do hambúrguer
+                        em uma área própria.
+                    -->
+
+                        <img
+                            src="img/lanche_1.png"
+                            alt="Hambúrguer artesanal com queijo e salada"
+                        >
+                        <!--
+                            Exibe a fotografia do primeiro lanche.
+
+                            O arquivo utilizado é lanche_1.png,
+                            localizado na pasta img.
+                        -->
+
+                    </div>
+
+
+                    <!-- INFORMAÇÕES DO PRIMEIRO LANCHE -->
+                    <div class="descricao">
+                    <!--
+                        Agrupa o nome, a descrição
+                        e as informações complementares
+                        do primeiro hambúrguer.
+                    -->
+
+                        <span class="categoria">O CLÁSSICO</span>
+                        <!-- Identifica a categoria do lanche. -->
+
+                        <h3>Hambúrguer Artesanal</h3>
+                        <!-- Nome do primeiro produto. -->
+
+                        <p>
+                            Pão macio, carne suculenta, queijo derretido,
+                            alface fresca, tomate e molho especial.
+                            Uma combinação clássica e irresistível.
+                        </p>
+                        <!--
+                            Descreve os ingredientes e as
+                            características do hambúrguer.
+                        -->
+
+
+                        <div class="detalhes">
+                        <!--
+                            Agrupa informações adicionais,
+                            como o modo de preparo e o preço.
+                        -->
+
+                            <span>Preparado na hora</span>
+                            <!-- Informação complementar do produto. -->
+
+                            <strong>R$ 25,00</strong>
+                            <!--
+                                A tag strong indica que o conteúdo
+                                possui importância especial.
+
+                                Aqui, destaca o preço do produto.
+                            -->
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SEGUNDO LANCHE -->
+                <article class="produto">
+                <!--
+                    Segundo artigo de produto.
+                    Utiliza as mesmas classes do primeiro
+                    para manter a padronização visual.
+                -->
+
+
+                    <!-- FOTOGRAFIA DO SEGUNDO LANCHE -->
+                    <div class="foto">
+
+                        <img
+                            src="img/lanche_2.png"
+                            alt="Hambúrguer especial com queijo e bacon"
+                        >
+                        <!-- Exibe a fotografia do segundo lanche. -->
+
+                    </div>
+
+
+                    <!-- INFORMAÇÕES DO SEGUNDO LANCHE -->
+                    <div class="descricao">
+
+                        <span class="categoria">ESPECIAL DA CASA</span>
+                        <!-- Categoria do segundo produto. -->
+
+                        <h3>Hambúrguer Especial</h3>
+                        <!-- Nome do segundo produto. -->
+
+                        <p>
+                            Carne grelhada, queijo derretido, bacon
+                            crocante e molho da casa, servidos em
+                            um pão dourado e saboroso.
+                        </p>
+                        <!-- Descrição dos ingredientes do lanche. -->
+
+
+                        <div class="detalhes">
+
+                            <span>Uma experiência especial</span>
+                            <!-- Informação complementar do produto. -->
+
+                            <strong>R$ 32,00</strong>
+                            <!-- Preço do segundo hambúrguer. -->
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </main>
+
+
+        <!-- RODAPÉ DO SITE -->
+        <footer id="contato">
+        <!--
+            A tag footer representa o rodapé da página
+            ou de uma seção.
+
+            Aqui, apresenta a marca, os créditos
+            do projeto e a informação de direitos autorais.
+
+            O atributo id="contato" identifica esta área
+            e permite acessá-la por meio de um link
+            para #contato, caso seja necessário.
+        -->
+
+
+            <div class="footer-marca">
+            <!-- Agrupa o nome da empresa no rodapé. -->
+
+                <strong>Sabor Brasil</strong>
+                <!-- Destaca o nome da lanchonete. -->
+
+            </div>
+
+
+            <p>O verdadeiro sabor está nos detalhes.</p>
+            <!-- Frase institucional da lanchonete. -->
+
+
+            <div class="footer-creditos">
+            <!-- Agrupa as informações de autoria do projeto. -->
+
+                <span>Desenvolvedor: Gustavo Lima</span>
+                <!-- Identifica quem desenvolveu o site. -->
+
+                <span>Cliente: Anthony</span>
+                <!-- Identifica o cliente fictício ou real do projeto. -->
+
+            </div>
+
+
+            <div class="copyright">
+            <!-- Área destinada à informação de direitos autorais. -->
+
+                &copy; 2026 - Atividade para a disciplina de Programação WEB.
+                <!--
+                    &copy; é uma entidade HTML que representa
+                    o símbolo ©.
+
+                    O texto identifica o ano e a finalidade
+                    acadêmica do projeto.
+                -->
+
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
